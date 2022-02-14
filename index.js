@@ -3,7 +3,7 @@ const inquirer = require('inquirer');
 const generateMarkdown = require('./generateMarkdown.js');
 const fs = require('fs');
 
-// TODO: Create an array of questions for user input
+// Question array
 const questionArray = [
 
     {
@@ -99,7 +99,7 @@ const questionArray = [
 
     {
         type: 'confirm',
-        name: 'contributers',
+        name: 'contributor',
         message: 'Would you like to allow contributors?',
         default: true
     },
@@ -108,8 +108,8 @@ const questionArray = [
         type: 'input',
         name: 'contribute',
         message: 'Please provide contribution guidelines',
-        when: ({ contribute }) => {
-            if (contribute) {
+        when: ({ contributor }) => {
+            if (contributor) {
                 return true;
             } else {
                 return false;
@@ -174,11 +174,11 @@ const init = () => {
 init().then(answers => {
 
     console.log(answers);
-    generateMarkdown(answers);
+    return generateMarkdown(answers);
 
 }).then(markdownData => {
 
-    writeToFile(markdownData);
+    return writeToFile(markdownData);
 
 }).then(writeFileResponse => {
 

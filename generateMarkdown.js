@@ -31,6 +31,7 @@ function renderLicenseSection(license) {
 
   if (license !== 'no license') {
   return `
+  
   ## [License](#table-of-contents)
   The application has the following license:
   ${renderLicenseLink(license)}
@@ -62,6 +63,7 @@ function generateMarkdown(data) {
   ${renderLicenseBadge(data.license)}
   
   ## Table-of-Contents
+
   * [Description](#description)
   * [Installation](#installation)
   * [Use](#use)
@@ -82,7 +84,7 @@ function generateMarkdown(data) {
   ${renderLicenseSection(data.license)}
 
   ## [Contributing](#table-of-contents)
-  ${renderContribution(data.contributers, data.contribute)}
+  ${renderContribution(data.contributor, data.contribute)}
   
   ## [Tests](#table-of-contents)
   ${data.test}
