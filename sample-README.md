@@ -1,5 +1,7 @@
-# README for Professional README Generator
-
+# Professional README Generator
+  
+   
+  
   ## Table-of-Contents
 
   * [Description](#description)
@@ -11,10 +13,7 @@
   * [Questions](#contact)
   
   ## [Description](#table-of-contents)
-  
   This is a project that was assigned in the Columbia Coding Bootcamp. This assignement serves as an exercise to test fluency with nodejs. Using nodejs and the inquirer package I was able to develop a professional README generator.
-
-  [Link to walkthrough video](https://watch.screencastify.com/v/9QB4UuT1mcobvlXbVNry)
 
   ## [Installation](#table-of-contents)
   after running npm init in your repo, run npm install inquirer

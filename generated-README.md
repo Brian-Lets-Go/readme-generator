@@ -1,8 +1,6 @@
-# a
+# project title
   
-  
-  ![badge](https://img.shields.io/badge/license-apache-blue)
-    
+   
   
   ## Table-of-Contents
 
@@ -15,31 +13,25 @@
   * [Questions](#contact)
   
   ## [Description](#table-of-contents)
-  d
+  professional redme generator using node js
 
   ## [Installation](#table-of-contents)
-  e
+  step 1 step 2
 
   ## [Use](#table-of-contents)
-  i
+  run node index in termainal from root repo
   
-  
-  ## [License](#table-of-contents)
-  The application has the following license:
-  
-    [apache](https://choosealicense.com/licenses/apache)
-      
-    
+   
 
   ## [Contributing](#table-of-contents)
   
-  this
+  please add a pull requst to repo with additions
     
   
   ## [Tests](#table-of-contents)
-  test
+  run node index 
   
   ## [Questions](#table-of-contents)
   Please contact me using the following links:
-  [GitHub](https://github.com/b)
-  [Email: c](mailto:c)
+  [GitHub](https://github.com/brian-lets-go)
+  [Email: brian.w.meenan@gmail.com](mailto:brian.w.meenan@gmail.com)
