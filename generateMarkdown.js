@@ -1,21 +1,65 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
+// Render the license badge
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge(license) { 
+  
+  if (license !== 'no license') {
+    return `
+  ![badge](https://img.shields.io/badge/license-${license}-blue)
+    `;
+  } else {
+    return ' ';
+  }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
+}
 
-// TODO: Create a function that returns the license section of README
+// Render the license link
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseLink(license) {
+
+    if (license !== 'no license') {
+    return `
+    [${license}](https://choosealicense.com/licenses/${license})
+      `;
+    } else {
+      return ' ';
+    }
+
+}
+
+// Render the license section of README
+function renderLicenseSection(license) {
+
+  if (license !== 'no license') {
+  return `
+  ## [License](#table-of-contents)
+  The application has the following license:
+  ${renderLicenseLink(license)}
+    `;
+  } else {
+    return ' ';
+  }
+
+ }
+
+// Render contributer section
+function renderContribution (contributors, data) {
+  if (!contributors) {
+    return `
+  Thank you for your interest in this project. However, contributions will not be accepted
+    `;
+  } else {
+    return `
+  ${data}
+    `;
+  }
+}
 
 // Generate markdown for README
 function generateMarkdown(data) {
-  
+
   return `# ${data.title}
   
-  ${renderLicenseBadge()}
+  ${renderLicenseBadge(data.license)}
   
   ## Table-of-Contents
   * [Description](#description)
@@ -35,11 +79,10 @@ function generateMarkdown(data) {
   ## [Use](#table-of-contents)
   ${data.use}
   
-  ## [License](#table-of-contents)
-  ${renderLicenseSection()}
+  ${renderLicenseSection(data.license)}
 
   ## [Contributing](#table-of-contents)
-  ${renderContributors(data.contributers, data.contribute)}
+  ${renderContribution(data.contributers, data.contribute)}
   
   ## [Tests](#table-of-contents)
   ${data.test}

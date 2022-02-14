@@ -100,7 +100,7 @@ const questionArray = [
     {
         type: 'confirm',
         name: 'contributers',
-        message: 'Would you like to allow other contributors?',
+        message: 'Would you like to allow contributors?',
         default: true
     },
 
@@ -142,11 +142,11 @@ const questionArray = [
 ];
 
 // Function to write README file
-const writeToFile = htmlData => {
+const writeToFile = markdownData => {
 
     return new Promise((resolve, reject) => {
 
-        fs.writeFile('./generated-README.md', htmlData, err => {
+        fs.writeFile('./generated-README.md', markdownData, err => {
             if (err) {
                 reject(err);
                 return;
@@ -171,22 +171,16 @@ const init = () => {
 }
 
 // Function call to initialize app
-init()
-
-.then(answers => {
+init().then(answers => {
 
     console.log(answers);
     generateMarkdown(answers);
 
-})
+}).then(markdownData => {
 
-.then(htmlData => {
+    writeToFile(markdownData);
 
-    writeToFile(htmlData);
-
-})
-
-.then(writeFileResponse => {
+}).then(writeFileResponse => {
 
     console.log(writeFileResponse.message);
 
