@@ -38,8 +38,8 @@ const questionArray = [
         type: 'input',
         name: 'email',
         message: 'What is your email address?',
-        validate: githubInput => {
-            if (githubInput) {
+        validate: emailInput => {
+            if (emailInput) {
                 return true;
             } else {
                 console.log('Please enter your email address');
@@ -52,8 +52,8 @@ const questionArray = [
         type: 'input',
         name: 'description',
         message: 'Describe you project',
-        validate: whatInput => {
-            if (whatInput) {
+        validate: descriptionInput => {
+            if (descriptionInput) {
                 return true;
             } else {
                 console.log('Please enter a description for your project');
@@ -78,10 +78,10 @@ const questionArray = [
 
     {
         type: 'input',
-        name: 'instructions',
+        name: 'use',
         message: 'Please provide instructions to use your project',
-        validate: usageInput => {
-            if (usageInput) {
+        validate: useInput => {
+            if (useInput) {
                 return true;
             } else {
                 console.log('Please enter your use instructions');
@@ -107,9 +107,9 @@ const questionArray = [
     {
         type: 'input',
         name: 'contribute',
-        message: 'Please provide contribution instructions',
-        when: ({ contributers }) => {
-            if (contributers) {
+        message: 'Please provide contribution guidelines',
+        when: ({ contribute }) => {
+            if (contribute) {
                 return true;
             } else {
                 return false;
@@ -119,7 +119,7 @@ const questionArray = [
             if (contributerInput) {
                 return true;
             } else {
-                console.log('Please enter contribution instructions');
+                console.log('Please enter contribution guidelines');
                 return false;
             }
         }
@@ -140,8 +140,6 @@ const questionArray = [
     }
 
 ];
-
-// inquirer.prompt(questions);
 
 // Function to write README file
 const writeToFile = htmlData => {
@@ -179,11 +177,12 @@ init()
 
     console.log(answers);
     generateMarkdown(answers);
+
 })
 
-.then(pageMD => {
+.then(htmlData => {
 
-    writeFile(pageMD);
+    writeToFile(htmlData);
 
 })
 
