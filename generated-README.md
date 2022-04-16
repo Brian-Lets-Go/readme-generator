@@ -1,4 +1,4 @@
-# project title
+# Tech-Blog
   
    
   
@@ -13,23 +13,23 @@
   * [Questions](#contact)
   
   ## [Description](#table-of-contents)
-  professional redme generator using node js
+  This is tech blog where you can post tech updates and see updates from other users
 
   ## [Installation](#table-of-contents)
-  step 1 step 2
+  n/a
 
   ## [Use](#table-of-contents)
-  run node index in termainal from root repo
+  n/a
   
    
 
   ## [Contributing](#table-of-contents)
   
-  please add a pull requst to repo with additions
+  Thank you for your interest in this project. However, contributions will not be accepted
     
   
   ## [Tests](#table-of-contents)
-  run node index 
+  n/a
   
   ## [Questions](#table-of-contents)
   Please contact me using the following links:
